@@ -4,4 +4,4 @@ services :
      # build :
      image: "robinthakur00/django-todo-app:latest"
      ports :
-          - "8000:8000"
+          - "8001:8000"
