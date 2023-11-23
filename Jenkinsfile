@@ -4,7 +4,7 @@ pipeline {
         
         stage("Code Fetch From Git"){
             steps{
-                git url: "https://github.com/robinthakur00/django-todo-app.git", branch: "master"
+                git url: "https://github.com/robinthakur00/django-todo-app.git", branch: "dev"
             }
         }
         stage("Build Docker Image"){
