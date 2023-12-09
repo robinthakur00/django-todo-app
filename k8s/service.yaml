@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 80 # Port you want to expose externally
       targetPort: 8000 # Port your app is running inside the container
-  type: LoadBalancer # Use 'NodePort' if LoadBalancer is not available
+  type: NodePort 
