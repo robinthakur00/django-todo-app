@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    app.kubernetes.io/instance: django-todo-app
   name: django-todo-app-service
+  namespace: django-todo-app-ns
 spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8000
   selector:
     app: django-todo-app
-  ports:
-    - protocol: TCP
-      port: 80 # Port you want to expose externally
-      targetPort: 8000 # Port your app is running inside the container
-  type: NodePort 
+  type: NodePort

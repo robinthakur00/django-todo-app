@@ -1,7 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app.kubernetes.io/instance: django-todo-app
   name: django-todo-app
+  namespace: django-todo-app-ns
 spec:
   replicas: 1
   selector:
@@ -13,7 +16,7 @@ spec:
         app: django-todo-app
     spec:
       containers:
-      - name: django-todo-app
-        image: robinthakur00/django-todo-app:latest
-        ports:
-        - containerPort: 8000 
+        - image: 'robinthakur00/django-todo-app:latest'
+          name: django-todo-app
+          ports:
+            - containerPort: 8000
