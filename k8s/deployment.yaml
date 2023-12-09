@@ -4,7 +4,7 @@ metadata:
   name: django-todo-app
   namespace: django-todo-app-ns
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: django-todo-app
